@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+  <h1>Dashboard Admin</h1>
+  <p>Konten khusus admin.</p>
+  <button onclick="logout()">Logout</button>
+  <script>
+    if (!localStorage.getItem('loggedIn')) {
+      window.location.href = "index.html";
+    }
+    function logout() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
